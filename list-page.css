@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica', sans-serif;
+}
+
+:root{
+    --bg-primary-color: #324937;
+    --header-color: #ffffff;
+    --task-text-color: #ffffff;
+    --deleted-task-text-color: #ff4040;
+    --task-bg-color: #e8e8e859; /* 35% opacity */
+    --done-task-bg-color: #e8e8e8b3;  /* 70% opacity */
+    --next-task-bg-color: #ffffff1a; /* 10% opacity */
+    --task-checkbox-color: #ffffffbf; /* 75% opacity */
+}
+
+body{
+    background-color: var(--bg-primary-color);
+}
+
+header{
+    text-align: center;
+    color: var(--header-color);
+    padding: 20px 0;
+    font-size: 32px;
+}
+
+.add-to-grocery-list-icon{
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-grocery-list-icon img:hover{
+    box-shadow: 2px 6px 55px 0 var(--done-task-bg-color);
+    transform: scale(1.1);
+}
+
+.add-to-grocery-list-icon img{
+    width: 50px;
+    height: 50px;
+}
+
+.tasks-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-item{
+    background-color: var(--task-bg-color);
+    color: var(--task-text-color);
+    min-width: 400px;
+    padding: 10px 20px 10px 10px;
+    margin: 5px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+.task-item-content{
+    display: flex;
+    align-items: center;
+}
+
+.done-button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--task-checkbox-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.task-item:hover{
+    transform: scale(1.05);
+}
+
+.done-button-inner{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--bg-primary-color);
+    display: none;
+}
+
+.delete-button:hover{
+    svg path{
+       fill: var(--deleted-task-text-color); 
+    }
+}
+
+.task-item:has(.next-task-item){
+    justify-content: center;
+    background-color: var(--next-task-bg-color);
+}
+
+.add-button{
+    transform: rotate(45deg);
+}
+
+.change-color-palette-icon{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    animation: floating 3s ease-in-out 0.2s infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        bottom: 20px;
+    }
+    50% {
+        bottom: 40px;
+    }
+}
+
+.change-color-palette-icon img{
+    width: 80px;
+    height: 70px;
+}
+
+.invisible{
+    display: none;
+}
