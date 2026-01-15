@@ -88,7 +88,6 @@ header{
     height: 13px;
     border-radius: 50%;
     background-color: var(--bg-primary-color);
-    display: none;
 }
 
 .delete-button:hover{
@@ -129,4 +128,10 @@ header{
 
 .invisible{
     display: none;
+}
+
+[contentEditable=true]:empty:not(:focus):before {
+    content: attr(data);
+    font-size: 16px;
+    color: var(--bg-primary-color);
 }
