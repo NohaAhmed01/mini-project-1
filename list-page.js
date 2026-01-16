@@ -114,3 +114,51 @@ function displayTasks() {
 }
 
 
+//future work
+const colorPalletteArray = [
+    {
+        bgPrimaryColor: "#CA1551",
+        headerColor: "#ABC798",
+        taskTextColor: "#ABC798",
+        taskBgColor: "#FFE4FA59", /* 35% opacity */
+        doneTaskBgColor: "#FFE4FAb3",  /* 70% opacity */
+        nextTaskBgColor: "#ABC7981a", /* 10% opacity */
+        taskCheckboxColor: "#ABC798bf" /* 75% opacity */
+    },
+    {
+        bgPrimaryColor: "#324937",
+        headerColor: "#ffffff",
+        taskTextColor: "#ffffff",
+        taskBgColor: "#e8e8e859", /* 35% opacity */
+        doneTaskBgColor: "#e8e8e8b3",  /* 70% opacity */
+        nextTaskBgColor: "#ffffff1a", /* 10% opacity */
+        taskCheckboxColor: "#ffffffbf" /* 75% opacity */
+    },
+    {
+        bgPrimaryColor: "#345995",
+        headerColor: "#EAC435",
+        taskTextColor: "#EAC435",
+        taskBgColor: "#CA155159", /* 35% opacity */
+        doneTaskBgColor: "#FFE4FAb3",  /* 70% opacity */
+        nextTaskBgColor: "#EAC4351a", /* 10% opacity */
+        taskCheckboxColor: "#EAC435bf" /* 75% opacity */
+    }
+]
+
+const pallette = document.querySelector(".change-color-palette-icon");
+const header = document.querySelector("h1");
+const text = taskList.querySelector("span");
+const next = taskItem[taskItem.length-1];
+const check = taskList.querySelector(".done-button-inner");
+
+pallette.addEventListener("click", ()=> {
+    let rand = colorPalletteArray[Math.floor((Math.random()*3))];
+    document.body.style.backgroundColor = rand.bgPrimaryColor;
+/*     header.style.color = rand.headerColor;
+    text.style.color = rand.taskTextColor;
+    taskItem[0].style.backgroundColor = rand.taskBgColor;
+    taskItem[1].style.backgroundColor = rand.taskBgColor;
+    next.style.backgroundColor = rand.nextTaskBgColor;
+    check.style.backgroundColor = rand.taskCheckboxColor; */
+    alert("future work")
+})
