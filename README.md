@@ -5,5 +5,14 @@
 Simple grocery list app built with HTML, CSS, and Vanilla JavaScript.
 
 ## Features
-- Add and delete tasks
-- Mark tasks as completed
+- Add grocery item
+- Mark item as completed
+- Delete item
+- Store items in localstorage
+
+## Future Work
+- add enhancements to the color pallette functionality
+
+## How to use
+1. Clone repo
+2. Open index.html
